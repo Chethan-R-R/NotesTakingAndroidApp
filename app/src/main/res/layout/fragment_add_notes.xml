@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/addpagelayout"
+    android:padding="5dp"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".screens.AddNotes.AddNotesFragment"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/pagetitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="40dp"
+            android:text="New Note"
+            android:textAlignment="center"
+            android:textColor="@color/yellow"
+            android:textSize="30dp" />
+
+        <TextView
+            android:id="@+id/fortitle"
+            style="@style/textview"
+            android:layout_below="@+id/pagetitle"
+            android:layout_marginTop="20dp"
+            android:text="Title" />
+        <EditText
+            android:id="@+id/editTitle"
+            style="@style/textview"
+            android:layout_below="@+id/fortitle"/>
+        <TextView
+            android:id="@+id/forDescription"
+            style="@style/textview"
+            android:layout_marginTop="20dp"
+            android:text="Description"
+            android:layout_below="@+id/editTitle"/>
+        <EditText
+            android:id="@+id/editDescription"
+            style="@style/textview"
+            android:layout_below="@+id/forDescription"/>
+        <TextView
+            android:id="@+id/forAddImage"
+            style="@style/textview"
+            android:text="Add Images"
+            android:layout_below="@id/editDescription"
+            android:layout_marginTop="20dp"/>
+        <Button
+            android:id="@+id/addImgBtn"
+            android:layout_below="@+id/forAddImage"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/yellow"
+            android:textColor="@color/blue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select Image"/>
+        <GridLayout
+            android:id="@+id/imgList"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/addImgBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:columnCount="2"
+            />
+        <Button
+            android:id="@+id/saveNote"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/imgList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/yellow"
+            android:textColor="@color/blue"
+            android:text="Save Note"/>
+    </RelativeLayout>
+</ScrollView>
+</layout>
